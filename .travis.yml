@@ -20,5 +20,5 @@ before_script:
 
 script:
   - sh -c "set -x;if [ '$NOTESTS' = '1' -a '$TRAVIS_PULL_REQUEST' != 'false' ]; then git-tools/commit-msg-hook-range.sh origin/$TRAVIS_BRANCH..$TRAVIS_PULL_REQUEST_SHA; fi"
-  - sh -c "set -x;if [ '$NOTESTS' = '1' -a '$TRAVIS_PULL_REQUEST' != 'false' ]; then git diff --name-only HEAD origin/3.2.x fi"
+  - sh -c "set -x;if [ '$NOTESTS' = '1' -a '$TRAVIS_PULL_REQUEST' != 'false' ]; then git diff --name-only HEAD origin/3.2.x; fi"
 
